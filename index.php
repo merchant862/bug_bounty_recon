@@ -8,293 +8,431 @@ error_reporting(E_ALL);
 if(isset($_POST['dir']))
 {  
     $encode = urlencode($_POST['url']);
-
+    
     echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." intitle:index.of', '_blank');</script>";
 }
 
 elseif(isset($_POST['www']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+    
+    $quote = '\"';
+    
+    echo "<script type='text/javascript'>window.open('https://publicwww.com/websites/".$quote.$encode.$quote."/', '_blank');</script>";
 }
 
 elseif(isset($_POST['conf']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." ext:xml | ext:conf | ext:cnf | ext:reg | ext:inf | ext:rdp | ext:cfg | ext:txt | ext:ora | ext:ini', '_blank');</script>";
 }
 
 elseif(isset($_POST['s3']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+    
+    $quote = '\"';
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:.s3.amazonaws.com".$quote."".$encode."".$quote."', '_blank');</script>";
 }
 
 elseif(isset($_POST['cms']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://whatcms.org/?s=".$encode."', '_blank');</script>";
 }
 
 elseif(isset($_POST['ip4']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://censys.io/ipv4?q=".$encode."', '_blank');</script>";
 }
 
 elseif(isset($_POST['db']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." ext:sql | ext:dbf | ext:mdb', '_blank');</script>";
 }
 
 elseif(isset($_POST['docs']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." ext:doc | ext:docx | ext:odt | ext:pdf | ext:rtf | ext:sxw | ext:psw | ext:ppt | ext:pptx | ext:pps | ext:csv', '_blank');</script>";
 }
 
 elseif(isset($_POST['pastebin']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." intitle:index.of', '_blank');</script>";
 }
 
 elseif(isset($_POST['wwm']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." intitle:index.of', '_blank');</script>";
 }
 
 elseif(isset($_POST['swf-google']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=inurl:".$encode." ext:swf', '_blank');</script>";
 }
 
 elseif(isset($_POST['dms']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://censys.io/domain?q=".$encode."'', '_blank');</script>";
 }
 
 elseif(isset($_POST['word']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." inurl:wp-content | inurl:wp-includes', '_blank');</script>";
 }
 
 elseif(isset($_POST['php']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." ext:php intitle:phpinfo \'published by the PHP Group\'', '_blank');</script>";
 }
 
 elseif(isset($_POST['link']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:linkedin.com employees ".$encode."', '_blank');</script>";
 }
 
 elseif(isset($_POST['github']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+    
+    $quote = '\"';
+
+    $astrik = '*.';
+
+    echo "<script type='text/javascript'>window.open('https://github.com/search?q=".$quote."".$astrik."".$encode."".$quote."', '_blank');</script>";
 }
 
 elseif(isset($_POST['swf-yandex']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://yandex.com/search/?text=site:".$encode."  mime:swf', '_blank');</script>";
 }
 
 elseif(isset($_POST['certs']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://censys.io/certificates?q=".$encode."'', '_blank');</script>";
 }
 
 elseif(isset($_POST['log']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." ext:log', '_blank');</script>";
 }
 
 elseif(isset($_POST['back']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode."  inurl:shell | inurl:backdoor | inurl:wso | inurl:cmd | shadow | passwd | boot.ini | inurl:backdoor', '_blank');</script>";
 }
 
 elseif(isset($_POST['htaccess']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+    
+    $quote = '\"';
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." inurl:".$quote."/phpinfo.php".$quote." | inurl:".$quote.".htaccess".$quote."', '_blank');</script>";
 }
 
 elseif(isset($_POST['openbug']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.openbugbounty.org/search/?search=".$encode."', '_blank');</script>";
 }
 
 elseif(isset($_POST['swf-wayback']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://web.archive.org/cdx/search?url=".$encode."/&matchType=domain&collapse=urlkey&output=text&fl=original&filter=urlkey:.*swf&limit=100000', '_blank');</script>";
 }
 
 elseif(isset($_POST['shodan']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.shodan.io/search?query=".$encode."', '_blank');</script>";
 }
 
 elseif(isset($_POST['old']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." ext:bkf | ext:bkp | ext:bak | ext:old | ext:backup', '_blank');</script>";
 }
 
 elseif(isset($_POST['setup']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode."  inurl:readme | inurl:license | inurl:install | inurl:setup | inurl:config', '_blank');</script>";
 }
 
 elseif(isset($_POST['sub']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." intitle:index.of', '_blank');</script>";
 }
 
 elseif(isset($_POST['reddit']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.reddit.com/search/?q=".$encode."', '_blank');</script>";
 }
 
 elseif(isset($_POST['swf2']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." intitle:index.of', '_blank');</script>";
 }
 
 elseif(isset($_POST['rce']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=.sharepoint.com/_vti_bin/webpartpages/asmx -docs -msdn -mdsec site:".$encode."', '_blank');</script>";
 }
 
 elseif(isset($_POST['login']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." inurl:login | inurl:signin | intitle:Login | intitle: signin | inurl:auth', '_blank');</script>";
 }
 
 elseif(isset($_POST['redirects']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." inurl:redir | inurl:url | inurl:redirect | inurl:return | inurl:src=http | inurl:r=http', '_blank');</script>";
 }
 
 elseif(isset($_POST['s-sub']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." intitle:index.of', '_blank');</script>";
 }
 
 elseif(isset($_POST['xml']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=".$encode."/crossdomain.xml', '_blank');</script>";
 }
 
 elseif(isset($_POST['swf3']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." intitle:index.of', '_blank');</script>";
 }
 
 elseif(isset($_POST['api']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." filetype:wsdl | filetype:WSDL | ext:svc | inurl:wsdl | Filetype: ?wsdl | inurl:asmx?wsdl | inurl:jws?wsdl | intitle:_vti_bin/sites.asmx?wsdl | inurl:_vti_bin/sites.asmx?wsdl', '_blank');</script>";
 }
 
 elseif(isset($_POST['sql']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." intext:\'sql syntax near\' | intext:\'syntax error has occurred\' | intext:\'incorrect syntax near\' | intext:\'unexpected end of SQL command\' | intext:\'Warning: mysql_connect()\' | intext:\'Warning: mysql_query()\' | intext:\'Warning: pg_connect()\'', '_blank');</script>";
 }
 
 elseif(isset($_POST['apache2']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." ext:action | ext:struts | ext:do', '_blank');</script>";
 }
 
 elseif(isset($_POST['word2']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." inurl:wp- | inurl:wp-content | inurl:plugins | inurl:uploads | inurl:themes | inurl:download', '_blank');</script>";
 }
 
 elseif(isset($_POST['threat']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://threatcrowd.org/domain.php?domain=".$encode."', '_blank');</script>";
 }
 
 elseif(isset($_POST['reverse']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://viewdns.info/reverseip/?host=".$encode."&t=1', '_blank');</script>";
 }
 
 elseif(isset($_POST['gist']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+    
+    $quote = '\"';
+
+    echo "<script type='text/javascript'>window.open('https://gist.github.com/search?q=*.".$quote."".$encode."".$quote."', '_blank');</script>";
 }
 
 elseif(isset($_POST['apache-config']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+    
+    $quote = '\"';
+    
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." filetype:config ".$quote."apache".$quote."', '_blank');</script>";
 }
 
 elseif(isset($_POST['3rd']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." intitle:index.of', '_blank');</script>";
 }
 
 elseif(isset($_POST['bit']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    $quote = '\"';
+
+    //echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site%3Aatlassian.net+|+site%3Abitbucket.org+".$quote."".$encode.""$quote"', '_blank');</script>";
 }
 
 elseif(isset($_POST['.git']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+   
+    $quote = '\"';
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=inurl:".$quote."/.git ".$quote."".$encode. " -github ', '_blank');</script>";
 }
 
 elseif(isset($_POST['traefik']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+    
+    $quote = '\"';
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=intitle:traefik+inurl:8080/dashboard".$quote."".$encode."".$quote."', '_blank');</script>";
 }
 
 elseif(isset($_POST['ct']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." intitle:index.of', '_blank');</script>";
 }
 
 elseif(isset($_POST['txt']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=".$encode."/robots.txt', '_blank');</script>";
 }
 
 elseif(isset($_POST['headers']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://securityheaders.com/?q=".$encode."&followRedirects=on', '_blank');</script>";
 }
 
 elseif(isset($_POST['total']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('hhttps://community.riskiq.com/search/".$encode."', '_blank');</script>";
 }
 
 elseif(isset($_POST['you']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.youtube.com/results?search_query=".$encode."', '_blank');</script>";
 }
 
 elseif(isset($_POST['cloud']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." intitle:index.of', '_blank');</script>";
 }
 
 elseif(isset($_POST['pass']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." intitle:index.of', '_blank');</script>";
 }
 
 elseif(isset($_POST['eye']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://domaineye.com/similar/".$encode."', '_blank');</script>";
 }
 
 elseif(isset($_POST['gitlab']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=inurl:gitlab ".$encode."', '_blank');</script>";
 }
 
 elseif(isset($_POST['stack']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+    
+    $quote = '\"';
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:stackoverflow.com ".$quote."".$encode."".$quote."', '_blank');</script>";
 }
 
 elseif(isset($_POST['digi']))
 {
-    echo "<script type='text/javascript'>window.open('https://www.geeksforgeeks.org', '_blank');</script>";
+    $encode = urlencode($_POST['url']);
+   
+    $quote = '\"';
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:digitaloceanspaces.com ".$quote."".$encode."".$quote."', '_blank');</script>";
 }
 
 ?>
@@ -582,7 +720,9 @@ elseif(isset($_POST['digi']))
 
          <div class="col-md-3">
             
-            <button type="submit" name="rce" class="custom btn btn-outline-dark btn-sm"><img src="img/icons8-microsoft-sharepoint-40.png" /> CVE-2020-0646 SharePoint RCE</button>
+            <button type="submit" name="rce" class="custom btn btn-outline-dark btn-sm" data-toggle="tooltip" 
+            title='PoC CallExternalMethodActivity x: Name = \"foo\"....System.Diagnostics.Process.Start(\"cmd.exe\", \"/c ping BurpCollabServer]\");private/**void**foobar(){//" />'>
+            <img src="img/icons8-microsoft-sharepoint-40.png" /> CVE-2020-0646 SharePoint RCE</button>
     
          </div>
 
