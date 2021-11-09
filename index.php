@@ -34,7 +34,7 @@ elseif(isset($_POST['s3']))
     
     $quote = '\"';
 
-    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:.s3.amazonaws.com".$quote."".$encode."".$quote."', '_blank');</script>";
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:.s3.amazonaws.com " . $quote. "" .$encode. "" .$quote."', '_blank');</script>";
 }
 
 elseif(isset($_POST['cms']))
@@ -69,14 +69,14 @@ elseif(isset($_POST['pastebin']))
 {
     $encode = urlencode($_POST['url']);
 
-    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." intitle:index.of', '_blank');</script>";
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:pastebin.com ".$encode."', '_blank');</script>";
 }
 
 elseif(isset($_POST['wwm']))
 {
     $encode = urlencode($_POST['url']);
 
-    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." intitle:index.of', '_blank');</script>";
+    echo "<script type='text/javascript'>window.open('http://wwwb-dedup.us.archive.org:8083/cdx/search?url=" .$encode. "/&matchType=domain&collapse=digest&output=text&fl=original,timestamp&filter=urlkey:.*wp[-].*&limit=1000000&xx=', '_blank');</script>";
 }
 
 elseif(isset($_POST['swf-google']))
@@ -90,7 +90,7 @@ elseif(isset($_POST['dms']))
 {
     $encode = urlencode($_POST['url']);
 
-    echo "<script type='text/javascript'>window.open('https://censys.io/domain?q=".$encode."'', '_blank');</script>";
+    echo "<script type='text/javascript'>window.open('https://censys.io/domain?q=".$encode."', '_blank');</script>";
 }
 
 elseif(isset($_POST['word']))
@@ -136,7 +136,7 @@ elseif(isset($_POST['certs']))
 {
     $encode = urlencode($_POST['url']);
 
-    echo "<script type='text/javascript'>window.open('https://censys.io/certificates?q=".$encode."'', '_blank');</script>";
+    echo "<script type='text/javascript'>window.open('https://censys.io/certificates?q=".$encode."', '_blank');</script>";
 }
 
 elseif(isset($_POST['log']))
@@ -200,8 +200,10 @@ elseif(isset($_POST['setup']))
 elseif(isset($_POST['sub']))
 {
     $encode = urlencode($_POST['url']);
+    
+    $astrik = '*.';
 
-    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." intitle:index.of', '_blank');</script>";
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:" . $astrik."".$encode."', '_blank');</script>";
 }
 
 elseif(isset($_POST['reddit']))
@@ -215,7 +217,7 @@ elseif(isset($_POST['swf2']))
 {
     $encode = urlencode($_POST['url']);
 
-    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." intitle:index.of', '_blank');</script>";
+    echo "<script type='text/javascript'>window.open('https://web.archive.org/cdx/search?url=" .$encode. "/&matchType=domain&collapse=urlkey&output=text&fl=original&filter=mimetype:application/x-shockwave-flash&limit=100000', '_blank');</script>";
 }
 
 elseif(isset($_POST['rce']))
@@ -242,8 +244,10 @@ elseif(isset($_POST['redirects']))
 elseif(isset($_POST['s-sub']))
 {
     $encode = urlencode($_POST['url']);
-
-    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." intitle:index.of', '_blank');</script>";
+     
+    $astrik = '*.*.';
+  
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:" .$astrik."".$encode."', '_blank');</script>";
 }
 
 elseif(isset($_POST['xml']))
@@ -257,7 +261,7 @@ elseif(isset($_POST['swf3']))
 {
     $encode = urlencode($_POST['url']);
 
-    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." intitle:index.of', '_blank');</script>";
+    echo "<script type='text/javascript'>window.open('https://web.archive.org/web/*/".$encode."/*', '_blank');</script>";
 }
 
 elseif(isset($_POST['api']))
@@ -324,7 +328,9 @@ elseif(isset($_POST['3rd']))
 {
     $encode = urlencode($_POST['url']);
 
-    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." intitle:index.of', '_blank');</script>";
+    $quote = '\"';
+
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site%3Ahttp%3A%2F%2Fideone.com+|+site%3Ahttp%3A%2F%2Fcodebeautify.org+|+site%3Ahttp%3A%2F%2Fcodeshare.io+|+site%3Ahttp%3A%2F%2Fcodepen.io+|+site%3Ahttp%3A%2F%2Frepl.it+|+site%3Ahttp%3A%2F%2Fjustpaste.it+|+site%3Ahttp%3A%2F%2Fpastebin.com+|+site%3Ahttp%3A%2F%2Fjsfiddle.net+|+site%3Ahttp%3A%2F%2Ftrello.com+|+site%3A*.atlassian.net+|+site%3Abitbucket.org+" .$quote. "" .$encode. "" .$quote."', '_blank');</script>";
 }
 
 elseif(isset($_POST['bit']))
@@ -333,16 +339,16 @@ elseif(isset($_POST['bit']))
 
     $quote = '\"';
 
-    //echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site%3Aatlassian.net+|+site%3Abitbucket.org+".$quote."".$encode.""$quote"', '_blank');</script>";
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site%3Aatlassian.net+|+site%3Abitbucket.org+".$quote."".$encode."".$quote."', '_blank');</script>";
 }
 
-elseif(isset($_POST['.git']))
+elseif(isset($_POST['git-folder']))
 {
     $encode = urlencode($_POST['url']);
    
     $quote = '\"';
 
-    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=inurl:".$quote."/.git ".$quote."".$encode. " -github ', '_blank');</script>";
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." inurl:/.git', '_blank');</script>";
 }
 
 elseif(isset($_POST['traefik']))
@@ -358,7 +364,7 @@ elseif(isset($_POST['ct']))
 {
     $encode = urlencode($_POST['url']);
 
-    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." intitle:index.of', '_blank');</script>";
+    echo "<script type='text/javascript'>window.open('https://crt.sh/?q=".$encode."', '_blank');</script>";
 }
 
 elseif(isset($_POST['txt']))
@@ -379,7 +385,7 @@ elseif(isset($_POST['total']))
 {
     $encode = urlencode($_POST['url']);
 
-    echo "<script type='text/javascript'>window.open('hhttps://community.riskiq.com/search/".$encode."', '_blank');</script>";
+    echo "<script type='text/javascript'>window.open('https://community.riskiq.com/search/".$encode."', '_blank');</script>";
 }
 
 elseif(isset($_POST['you']))
@@ -393,14 +399,14 @@ elseif(isset($_POST['cloud']))
 {
     $encode = urlencode($_POST['url']);
 
-    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." intitle:index.of', '_blank');</script>";
+    echo "<script type='text/javascript'>window.open('https://cse.google.com/cse?cx=002972716746423218710:veac6ui3rio#gsc.tab=0&gsc.q=".$encode."', '_blank');</script>";
 }
 
 elseif(isset($_POST['pass']))
 {
     $encode = urlencode($_POST['url']);
 
-    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:".$encode." intitle:index.of', '_blank');</script>";
+    echo "<script type='text/javascript'>window.open('https://www.google.com/search?q=site:throwbin.io ".$encode."', '_blank');</script>";
 }
 
 elseif(isset($_POST['eye']))
@@ -490,9 +496,13 @@ elseif(isset($_POST['digi']))
 
     <div class="container" align="center" style="text-align: justify-all;"> 
 
-     <form method="POST" action="index.php">
+     <form method="POST" action="index.php" id="recon-form">
 
        <h1>BUG BOUNTY RECON</h1>
+
+       <h4>Created By Saif Merchant</h4>
+
+       <h6>Github Profile: <a href="https://github.com/merchant862" target="_blank">https://github.com/merchant862</a></h6>
         
        <div class="row">
          
@@ -782,7 +792,7 @@ elseif(isset($_POST['digi']))
 
          <div class="col-md-3">
             
-            <button type="submit" name="apache" class="custom btn btn-outline-dark btn-sm"><img src="img/icons8-server-40.png" /> APACHE STRUTS RCE</button>
+            <button type="submit" name="apache2" class="custom btn btn-outline-dark btn-sm"><img src="img/icons8-server-40.png" /> APACHE STRUTS RCE</button>
     
          </div>
 
@@ -842,7 +852,7 @@ elseif(isset($_POST['digi']))
 
          <div class="col-md-3">
             
-            <button type="submit" name=".git" class="custom btn btn-outline-dark btn-sm"><img src="img/icons8-git-40.png" /> .git folder</button>
+            <button type="submit" name="git-folder" class="custom btn btn-outline-dark btn-sm"><img src="img/icons8-git-40.png" /> .git folder</button>
     
          </div>
 
